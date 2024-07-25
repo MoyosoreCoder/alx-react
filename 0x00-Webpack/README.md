@@ -1,1 +1,1 @@
-0x00-Webpack folder
+0x00-Webpack
