@@ -1,1 +1,1 @@
-alx-react project
+alx react project
