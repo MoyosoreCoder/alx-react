@@ -7,7 +7,7 @@
     "build": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mariam",
   "license": "ISC",
   "dependencies": {
     "semistandard": "^16.0.1"
