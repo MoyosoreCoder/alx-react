@@ -4,7 +4,7 @@ module.exports = {
   mode: "production",
   entry: path.resolve(__dirname, "./js/dashboard_main.js"),
   performance: {
-    maxAssetSize: 1000000,
+    maxAssetSize: 1000000, // Increased max asset size to 1MB
   },
   output: {
     filename: "bundle.js",
@@ -19,12 +19,33 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          "file-loader",
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[hash].[ext]",
+              outputPath: "images",
+            },
+          },
           {
             loader: "image-webpack-loader",
             options: {
-              bypassOnDebug: true,
-              disable: true,
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              optipng: {
+                enabled: true,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
             },
           },
         ],
