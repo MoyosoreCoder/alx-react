@@ -1,0 +1,15 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Build output
+dist/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore other files you don’t want to track
+*.env
