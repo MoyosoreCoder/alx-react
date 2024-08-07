@@ -1,6 +1,14 @@
-import "./styles.css"; // If you have CSS, import it here
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App/App";
+import Notifications from "./Notifications/Notifications";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("root");
-  root.textContent = "Hello, Webpack with hot reloading!";
-});
+ReactDOM.render(
+  <React.StrictMode>
+    <div className="root-notifications">
+      <Notifications />
+    </div>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
