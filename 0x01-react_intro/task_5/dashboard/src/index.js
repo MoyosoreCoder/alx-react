@@ -1,5 +1,6 @@
-// Simple example to show that JavaScript is working
+import "./styles.css"; // If you have CSS, import it here
+
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
-  root.innerHTML = "<h1>Hello, Webpack!</h1>";
+  root.textContent = "Hello, Webpack with hot reloading!";
 });
