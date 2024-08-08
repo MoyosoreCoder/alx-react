@@ -50,7 +50,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html", // The name of the HTML file to be created
       template: "./dist/index.html", // Template file for generating the HTML file
-      inject: "body", // Inject the script tag at the end of the body
+      inject: "body", // Injec the script tag at the end of the body
     }),
   ],
 };
