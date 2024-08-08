@@ -1,57 +1,54 @@
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { HotModuleReplacementPlugin } = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js", // Entry point for your JavaScript
+  entry: "./src/index.js",
   output: {
-    filename: "bundle.js", // Output bundle filename
-    path: path.resolve(__dirname, "dist"), // Output directory
-    publicPath: "/", // Public URL of the output directory
+    filename: "bundle.js",
   },
   mode: "development",
   module: {
     rules: [
       {
-        test: /\.css$/i, // Match CSS files
-        use: ["style-loader", "css-loader"], // Process CSS files
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i, // Match image files
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        // type: 'asset/resource',
         use: [
-          "file-loader", // Handle file imports
+          "file-loader",
           {
-            loader: "image-webpack-loader", // Optimize images
+            loader: "image-webpack-loader",
             options: {
-              bypassOnDebug: true, // Disable optimization in debug mode
-              disable: true, // Disable image optimization for webpack@2.x and newer
+              bypassOnDebug: true, // webpack@1.x
+              disable: true, // webpack@2.x and newer
             },
           },
         ],
       },
       {
-        test: /\.(js|jsx)$/, // Match JavaScript and JSX files
-        exclude: /node_modules/, // Exclude node_modules
-        use: ["babel-loader"], // Use Babel to transpile JS and JSX
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"], // Resolve JS and JSX file extensions
+    extensions: ["*", ".js", ".jsx"],
   },
   devServer: {
-    static: path.join(__dirname, "dist"), // Serve static files from the dist folder
-    compress: true, // Enable gzip compression
-    open: true, // Open the browser on server start
-    hot: true, // Enable hot module replacement
-    port: 8564, // Port for the development server
+    static: "./dist",
+    compress: true,
+    open: true,
+    hot: true,
+    port: 8564,
   },
-  devtool: "inline-source-map", // Generate inline source maps
+  devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", // Template for generating index.html
-      inject: "body", // Inject bundle.js into the body tag
+      name: "index.html",
+      inject: false,
+      template: "./dist/index.html",
     }),
-    new HotModuleReplacementPlugin(), // Enable HMR
   ],
 };
