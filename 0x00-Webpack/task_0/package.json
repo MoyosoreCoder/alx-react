@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "task_0",
   "version": "1.0.0",
@@ -19,3 +20,26 @@
     "jquery": "^3.7.1"
   }
 }
+=======
+{
+  "name": "task_0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "Mariam Kelani",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
+>>>>>>> a371e2aa4e6955be86bceb3f09f1702a54731cdc

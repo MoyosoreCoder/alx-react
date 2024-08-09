@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #logo {
   width: 200px;
   height: 200px;
@@ -10,3 +11,17 @@
   right: 10px;
   font-weight: bold;
 }
+=======
+#logo {
+  width: 200px;
+  height: 200px;
+  background-image: url('../assets/holberton-logo.jpg');
+  background-size: 200px 200px;
+}
+
+.counter-text {
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+}
+>>>>>>> a371e2aa4e6955be86bceb3f09f1702a54731cdc

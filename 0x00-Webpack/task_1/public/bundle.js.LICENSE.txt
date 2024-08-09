@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*!
  * jQuery JavaScript Library v3.7.1
  * https://jquery.com/
@@ -8,3 +9,15 @@
  *
  * Date: 2023-08-28T13:37Z
  */
+=======
+/*!
+ * jQuery JavaScript Library v3.7.1
+ * https://jquery.com/
+ *
+ * Copyright OpenJS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.org/license
+ *
+ * Date: 2023-08-28T13:37Z
+ */
+>>>>>>> a371e2aa4e6955be86bceb3f09f1702a54731cdc

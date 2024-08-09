@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "task_2",
   "version": "1.0.0",
@@ -23,3 +24,30 @@
     "lodash": "^4.17.21"
   }
 }
+=======
+{
+  "name": "task_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Mariam",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.11.0",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^7.0.1",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
+  }
+}
+>>>>>>> a371e2aa4e6955be86bceb3f09f1702a54731cdc
