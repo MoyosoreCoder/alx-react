@@ -1,4 +1,5 @@
-import { List } from "immutable";
+
+import { List } from 'immutable';
 
 export function getListObject(array) {
   return List(array);
