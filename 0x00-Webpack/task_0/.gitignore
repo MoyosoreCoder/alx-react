@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+node_modules/
+/dist/main.js
+/dist/main.js.LICENSE.txt
+=======
+node_modules/
+/dist/main.js
+/dist/main.js.LICENSE.txt
+>>>>>>> a371e2aa4e6955be86bceb3f09f1702a54731cdc

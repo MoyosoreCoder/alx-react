@@ -1,0 +1,57 @@
+<<<<<<< HEAD
+:root {
+  --color-brand: #e01d3f;
+}
+
+.App-header {
+  display: flex;
+  color: var(--color-brand);
+  font-size: 20px;
+  border-bottom: 3px solid var(--color-brand);
+}
+
+.App-header img {
+  width: 200px;
+}
+
+.App-body {
+  margin: 50px;
+}
+
+.App-footer {
+  border-top: 3px solid var(--color-brand);
+  width: 100%;
+  display: flex;
+  font-weight: 900;
+  justify-content: center;
+  font-style: italic;
+}
+=======
+:root {
+  --color-brand: #e01d3f;
+}
+
+.App-header {
+  display: flex;
+  color: var(--color-brand);
+  font-size: 20px;
+  border-bottom: 3px solid var(--color-brand);
+}
+
+.App-header img {
+  width: 200px;
+}
+
+.App-body {
+  margin: 50px;
+}
+
+.App-footer {
+  border-top: 3px solid var(--color-brand);
+  width: 100%;
+  display: flex;
+  font-weight: 900;
+  justify-content: center;
+  font-style: italic;
+}
+>>>>>>> a371e2aa4e6955be86bceb3f09f1702a54731cdc
