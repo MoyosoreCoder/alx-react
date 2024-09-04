@@ -1,9 +1,12 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"), // Output directory
+    clean: true, // Optional: Clean the output directory before each build
   },
   mode: "development",
   module: {
@@ -14,9 +17,8 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        // type: 'asset/resource',
+        type: "asset/resource", // Use asset/resource for file handling
         use: [
-          "file-loader",
           {
             loader: "image-webpack-loader",
             options: {
@@ -29,12 +31,12 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: "babel-loader",
       },
     ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: [".js", ".jsx"],
   },
   devServer: {
     static: "./dist",
@@ -46,9 +48,9 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      name: "index.html",
-      inject: false,
-      template: "./dist/index.html",
+      filename: "index.html", // Output HTML file name
+      template: "./dist/index.html", // Path to your HTML template
+      inject: true, // Automatically inject the bundle into the HTML
     }),
   ],
 };
